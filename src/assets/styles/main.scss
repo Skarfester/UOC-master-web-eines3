@@ -1,33 +1,38 @@
-/**
- * Use this file to import partials.
- * Do not include SCSS code in this file.
- */
-
-/**
- * Import variables
- */
-
+/* VARIABLES */
+/* Colors propis del projecte */
 @import "variables";
 
-/**
- * Import npm dependencies
- * see: https://v2.parceljs.org/features/module-resolution/
- * see commented examples below
- */
+/* TAILWINDCSS 3 */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-// @import "some-node-module";
-// @import "@some-company/some-node-module";
-//@import "../../../node_modules/tailwindcss/index.css";
-//@import "/node_modules/tailwindcss/index.css";
-@import "tailwindcss/index.css";
+/* Article */
+.css-article-p {
+	@apply max-w-5xl mx-auto text-justify mb-4;
+}
 
-/**
- * Import layouts
- * It's a best practice to use a different partial for each page
- */
+.css-article-img {
+	@apply rounded aspect-video object-cover max-w-full h-auto mx-auto md:aspect-[2];
+}
 
-@import "layouts/home";
+.css-article-caption {
+	@apply text-gray-500;
+}
 
-/**
- * Do NOT include anything else in this file!
- */
+.css-article-li {
+	@apply px-4 py-3 border-b border-gray-300;
+}
+
+.css-article-li:last-child {
+	@apply border-0;
+}
+
+/* Participants */
+.css-destacat > div:first-child {
+	@apply sm:max-lg:basis-4/5;
+}
+
+.css-destacat > div:first-child > img {
+	@apply sm:max-lg:aspect-[2];
+}
